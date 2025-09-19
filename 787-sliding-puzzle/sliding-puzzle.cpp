@@ -8,8 +8,7 @@ public:
       size_t h = 0;
       for (auto &row : board)
         for (int x : row)
-          h ^=
-              std::hash<int>()(x) + 0x9e3779b97f4a7c15ULL + (h << 6) + (h >> 2);
+          h = (h << 3) + x;
       return h;
     }
   };

@@ -23,38 +23,6 @@ public:
       for (int i = s.size() - 1; i >= 0; i--)
         q.push_front(s[i]);
       return s;
-      //    vector<string> s(3, "");
-      //     if (q.empty()) {
-      //       return s;
-      //     }
-      //     while (q.front().substr(0, pref.size()) < pref) {
-      //       q.pop_front();
-      //     }
-      //     if (q.empty())
-      //       return s;
-      //     if (q.front().substr(0, pref.size()) > pref) {
-      //       return s;
-      //     }
-      //     // first
-      //     if (q.empty())
-      //       return s;
-      //     s[0] = q.front();
-      //     q.pop_front();
-      //     if (q.empty() || q.front().substr(0, pref.size()) > pref) {
-      //       q.push_front(s[0]);
-      //       return s;
-      //     }
-      //     s[1] = q.front();
-      //     q.pop_front();
-      //     if (q.empty() || q.front().substr(0, pref.size()) > pref) {
-      //       q.push_front(s[1]);
-      //       q.push_front(s[0]);
-      //       return s;
-      //     }
-      //     s[2] = q.front();
-      //     q.push_front(s[1]);
-      //     q.push_front(s[0]);
-      //     return s;
     };
     vector<vector<string>> answer(searchWord.size(), vector<string>(3, ""));
     for (int i = 0; i < searchWord.size(); i++) {

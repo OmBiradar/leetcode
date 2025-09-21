@@ -6,6 +6,11 @@ public:
   int change(int amount, vector<int> &coins) {
     // to count number of ways to make the amount
     // unique ways only
+    // something to do with overflow in
+    // intermediate values of dp
+    // in unsigned it takes modulo 2^n - 1, but
+    // in signed it gives an error, thus
+    // using unsigned long long saves us here
     vector<unsigned long long> dp(amount + 1, 0);
     dp[0] = 1; // 1 way to make 0 total amount
     for (auto c : coins) {

@@ -17,7 +17,8 @@ public:
       for (int j = 1; j <= m; j++) {
         // update dp[i][j]
         // if (s[i-1] == t[j-1]) then dp[i-1][j-1]
-        // else max of dp[i-1][j] (add) and dp[i][j-1] (remove)
+        // else max of dp[i-1][j] (add) and dp[i][j-1] (remove) or dp[i-1][j-1]
+        // (replace)
         if (w1[i - 1] == w2[j - 1])
           dp[i][j] = min(dp[i][j], dp[i - 1][j - 1]);
         else

@@ -4,7 +4,7 @@ using namespace std;
 class Solution {
 public:
   int uniquePaths(int m, int n) {
-    // classic dp problem
+    // grid dp problem
     vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
     dp[0][0] = 0;
     dp[1][1] = 1;

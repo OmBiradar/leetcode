@@ -42,9 +42,12 @@ public:
             }
         };
         dfs2(0, -1);
-        for (auto c : cnt) cout << c << ' ';
-        cout << endl;
-        for (auto c : ans) cout << c << ' ';
+
+        /* WARNING: I/O can sometimes result in TLE, better to comment before */
+
+        // for (auto c : cnt) cout << c << ' ';
+        // cout << endl;
+        // for (auto c : ans) cout << c << ' ';
 
         return ans;
     }

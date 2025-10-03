@@ -8,6 +8,8 @@ public:
         vector<pair<double, int>> workers;
         // most important wage / quality ratio
         // heighest ratio dominates the whole group
+        // consider low wage/quality first
+        // remove heighest quality first
         for (int i = 0; i < n; i++)
             workers.push_back({(double) wage[i] / quality[i], i});
         sort(workers.begin(), workers.end());
